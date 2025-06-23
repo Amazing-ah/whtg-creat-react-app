@@ -1,6 +1,6 @@
-# {{PROJECT_NAME}}
+# whtg-creat-react-app
 
-{{PROJECT_DESCRIPTION}}
+现代化 React + TypeScript 项目一键脚手架，快速搭建开箱即用的前端工程。
 
 ## 技术栈
 
@@ -51,47 +51,26 @@ npm run dev
 npm run build
 ```
 
-## 项目结构
+## 项目结构说明
 
-\`\`\`
+```
 src/
-├── components/          # 组件
-│   ├── ui/             # shadcn/ui 组件
-│   ├── layout/         # 布局组件
-│   └── common/         # 通用组件
-├── pages/              # 页面
-├── hooks/              # 自定义 hooks
-├── lib/                # 工具库
-└── types/              # 类型定义
-\`\`\`
+├── components/      # 组件
+│   ├── ui/          # shadcn/ui 组件
+│   ├── layout/      # 布局组件
+│   └── common/      # 通用组件
+├── pages/           # 页面
+├── hooks/           # 自定义 hooks
+├── lib/             # 工具库
+└── types/           # 类型定义
+```
 
 ## 功能特性
 
 - ✅ TypeScript 支持
-- ✅ 响应式设计
-- ✅ 代码规范检查
-- ✅ 路由配置
-- ✅ API 请求封装
-- ✅ 组件库集成
+- ✅ 响应式/原子化 CSS（Tailwind）
+- ✅ 代码规范检查（ESLint、Prettier）
+- ✅ 路由与页面解耦
+- ✅ API 请求（TanStack Query）
+- ✅ 高效组件库集成（shadcn/ui）
 - ✅ 主题切换支持
-
-## 开发指南
-
-### 添加新页面
-
-```typescript
-// 1. 在 src/pages 创建页面组件
-// 2. 在路由配置中添加路由
-```
-
-### 使用 API
-
-```typescript
-import { useQuery } from '@tanstack/react-query';
-
-const { data, isLoading } = useQuery({
-  queryKey: ['users'],
-  queryFn: fetchUsers,
-});
-```
-

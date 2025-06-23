@@ -2,6 +2,14 @@
   "name": "@whtg/creat-react-app",
   "version": "1.0.0",
   "description": "Modern React Project Scaffold",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amazing-ah/whtg-creat-react-app.git"
+  },
+  "homepage": "https://github.com/Amazing-ah/whtg-creat-react-app#readme",
+  "bugs": {
+    "url": "https://github.com/Amazing-ah/whtg-creat-react-app/issues"
+  },
   "bin": {
     "cr": "./bin/create-app.js"
   },
@@ -16,6 +24,6 @@
     "template",
     "scaffold"
   ],
-  "author": "author",
+  "author": "whtg",
   "license": "MIT"
 }
