@@ -1,0 +1,21 @@
+{
+  "name": "@whtg/creat-react-app",
+  "version": "1.0.0",
+  "description": "Modern React Project Scaffold",
+  "bin": {
+    "cr": "./bin/create-app.js"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "template",
+    "scaffold"
+  ],
+  "author": "author",
+  "license": "MIT"
+}
