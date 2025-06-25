@@ -150,8 +150,16 @@ function countFiles(dirPath) {
           file !== '.editorconfig') {
            continue;
       }
-      // 跳过 node_modules 等目录
-      if (file === 'node_modules' || file === 'dist' || file === 'build') {
+      // 跳过 node_modules、dist、build 目录和锁文件
+      if (
+        file === 'node_modules' ||
+        file === 'dist' ||
+        file === 'build' ||
+        file === 'package-lock.json' ||
+        file === 'yarn.lock' ||
+        file === 'pnpm-lock.yaml' ||
+        file === 'pnpm-workspace.yaml'
+      ) {
         continue;
       }
 
@@ -194,8 +202,16 @@ function copyTemplate(templatePath, targetPath, vars, progressBar, processedFile
           return;
         }
 
-        // 跳过 node_modules 等目录
-        if (file === 'node_modules' || file === 'dist' || file === 'build') {
+        // 跳过 node_modules、dist、build 目录和锁文件
+        if (
+          file === 'node_modules' ||
+          file === 'dist' ||
+          file === 'build' ||
+          file === 'package-lock.json' ||
+          file === 'yarn.lock' ||
+          file === 'pnpm-lock.yaml' ||
+          file === 'pnpm-workspace.yaml'
+        ) {
           return;
         }
 
