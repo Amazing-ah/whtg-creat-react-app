@@ -313,7 +313,11 @@ async function createProject() {
   showProjectInfo(projectName, projectDescription, vars);
 
   const confirm = await askQuestion('✨ 确认创建项目？(y/n): ');
-  if (confirm.toLowerCase() !== 'y' && confirm.toLowerCase() !== 'yes') {
+  if (
+    confirm.trim() !== '' &&
+    confirm.toLowerCase() !== 'y' &&
+    confirm.toLowerCase() !== 'yes'
+  ) {
     log('🚫 取消创建项目', 'yellow');
     rl.close();
     return;

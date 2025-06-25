@@ -84,3 +84,7 @@ src/
 1. Vite 升级至 7.0.0
 2. 创建项目时不再复制锁文件（package-lock.json、yarn.lock、pnpm-lock.yaml、pnpm-workspace.yaml）
 3. 文档内容优化与更新
+
+## 升级日志 1.0.3
+1. 创建项目时，确认提示“确认创建项目？(y/n):”支持直接回车，默认选择“是”，提升交互体验。
+
