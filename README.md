@@ -6,10 +6,11 @@
 ## 技术栈（依赖说明）
 如需调整依赖版本，请直接修改对应的版本号。
 脚手架生成的项目仅包含最基础的目录结构和依赖配置，后续可根据实际项目需要自行完善。
+请自行更改文件/直接删除，生成文件只是示例
 
 - ⚡️ React 19 + TypeScript
 - 🛣️ React Router v7
-- 🔄 TanStack Query (数据获取)
+- 🔄 TanStack Query (声明模式)
 - 🎨 Tailwind CSS + shadcn/ui
 - 📦 Vite (构建工具) 7.0.0
 
@@ -58,33 +59,43 @@ npm run build
 
 ```
 src/
-├── components/      # 组件
-│   ├── ui/          # shadcn/ui 组件
-│   ├── layout/      # 布局组件
-│   └── common/      # 通用组件
-├── pages/           # 页面
-├── hooks/           # 自定义 hooks
-├── lib/             # 工具库
-└── types/           # 类型定义
+├── assets/
+├── types/
+│   └── loading.ts              # Loading 相关类型定义
+├── components/
+│   ├── LoadingSpinner.tsx      # 基础加载动画组件
+│   ├── SuspenseLoading.tsx     # Suspense 专用加载组件
+│   └── layout/
+│       └── rootLayout.tsx      # 根布局组件
+│   └── ui/                     # shandcn/ui
+├── lib/
+├── pages/
+│   ├── Home.tsx               # 首页
+│   ├── Setting.tsx            # 设置页面（懒加载）
+│   ├── Login.tsx              # 登录页面
+│   ├── Register.tsx           # 注册页面
+│   └── NotFound.tsx           # 404 页面
+├── App.tsx                    # 主应用组件
+└── main.tsx                   # 应用入口
 ```
 
 > 📢 脚手架会自动跳过 npm/yarn/pnpm 的锁文件（package-lock.json、yarn.lock、pnpm-lock.yaml、pnpm-workspace.yaml），不会复制到新项目中。如需锁定依赖版本，请在新项目中自行生成锁文件。
 
-## 功能特性
 
-- ✅ TypeScript 支持
-- ✅ 响应式/原子化 CSS（Tailwind）
-- ✅ 代码规范检查（ESLint、Prettier）
-- ✅ 路由与页面解耦
-- ✅ API 请求（TanStack Query）
-- ✅ 高效组件库集成（shadcn/ui）
-- ✅ 主题切换支持
+## 升级日志 1.0.4
+⚠️ 从 数据模式 迁移为 声明模式 ，数据请求状态管理 使用 tanstack query ，与 数据模式的loader 解耦，实现数据逻辑与路由解耦
+1. 更新 @tailwindcss/vite 适配 vite 7.0
+2. 新增 lazy 组件的 loading 设置
+3. 配置好了 toaster 引用,方便后续可以直接使用
+4. 增加了 @tanstack/eslint-plugin-query 的配置
+5. 模拟 query 的loading 效果
+
+
+## 升级日志 1.0.3
+1. 创建项目时，确认提示“确认创建项目？(y/n):”支持直接回车，默认选择“是”，提升交互体验。
+
 
 ## 升级日志 1.0.2
 1. Vite 升级至 7.0.0
 2. 创建项目时不再复制锁文件（package-lock.json、yarn.lock、pnpm-lock.yaml、pnpm-workspace.yaml）
 3. 文档内容优化与更新
-
-## 升级日志 1.0.3
-1. 创建项目时，确认提示“确认创建项目？(y/n):”支持直接回车，默认选择“是”，提升交互体验。
-
