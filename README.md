@@ -9,8 +9,8 @@
 请自行更改文件/直接删除，生成文件只是示例
 
 - ⚡️ React 19 + TypeScript
-- 🛣️ React Router v7
-- 🔄 TanStack Query (声明模式)
+- 🛣️ React Router v7 (声明模式)
+- 🔄 TanStack Query
 - 🎨 Tailwind CSS + shadcn/ui
 - 📦 Vite (构建工具) 7.0.0
 
